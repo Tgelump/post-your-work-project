@@ -64,7 +64,7 @@ def time_stats(df):
     print('-'*40)
 
 
-def station_stats(df):
+#def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
 
     print('\nCalculating The Most Popular Stations and Trip...\n')
@@ -118,19 +118,24 @@ def user_stats(df):
     print('-'*40)
 
 
+def show_statistics(df):
+    time_stats(df)
+    station_stats(df)
+    trip_duration_stats(df)
+    user_stats(df)
+
+
 def main():
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
-        time_stats(df)
-        station_stats(df)
-        trip_duration_stats(df)
-        user_stats(df)
+        show_statistics(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
+
 
 
 if __name__ == "__main__":
