@@ -23,7 +23,7 @@ This project was created as part of a Git and GitHub learning exercise.
   - PyCharm
 
 ### Firmware
-- No special firmware is required
+- firmware 3.0 or later is required
 
 ### Hardware
 - A computer running Windows, macOS, or Linux
